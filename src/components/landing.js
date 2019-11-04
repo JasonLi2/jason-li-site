@@ -5,7 +5,7 @@ const Container = styled.section`
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80') center center/cover;
+    background: url('https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2569&q=80') center center/cover;
     `
 
 const Content = styled.div`
@@ -33,7 +33,7 @@ const Landing = () => (
     <Container>
     <Content>
       <Primary>Jason Li</Primary>
-      <Secondary>Programmer from 9 to 5, a gamer and a below-average to average artist and musician the rest of the time. </Secondary>
+      <Secondary>Programmer, gamer, anime fan and a below-average to average artist and musician depending on the day. </Secondary>
     </Content>
     </Container>
 )
