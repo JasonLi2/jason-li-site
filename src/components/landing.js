@@ -33,7 +33,7 @@ const Landing = () => (
     <Container>
     <Content>
       <Primary>Jason Li</Primary>
-      <Secondary>Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum </Secondary>
+      <Secondary>Programmer from 9 to 5, a gamer and a below-average to average artist and musician the rest of the time. </Secondary>
     </Content>
     </Container>
 )
