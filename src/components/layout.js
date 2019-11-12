@@ -1,8 +1,8 @@
-import React from 'react'
-import { createGlobalStyle } from 'styled-components'
+import React from "react";
+import { createGlobalStyle } from "styled-components";
 
-import Navbar from './navbar'
-import Footer from './footer'
+import Nav from "./nav";
+import Footer from "./footer";
 
 const GlobalStyles = createGlobalStyle`
 *, *::after, *::before{
@@ -32,14 +32,14 @@ a{
     }
 
 }
-`
+`;
 
 const Layout = ({ children }) => (
-    <div>
-        <GlobalStyles/>
-        <Navbar/>
-        {children}
-    </div>
-)
+  <div>
+    <GlobalStyles />
+    <Nav />
+    {children}
+  </div>
+);
 
-export default Layout
+export default Layout;

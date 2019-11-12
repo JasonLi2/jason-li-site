@@ -16,6 +16,10 @@ const Content = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
+  @media only screen and (max-width: 39em) {
+    width: 100%;
+    padding: 3rem;
+  }
 `;
 
 const Primary = styled.h1`

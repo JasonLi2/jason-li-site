@@ -13,6 +13,10 @@ const Content = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  flex-direction: ${props => (props.reverse ? "row-reverse" : "row")};
+  @media only screen and (max-width: 50em) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Secondary = styled.h3`
@@ -70,10 +74,7 @@ const Resume = ({ images }) => (
         <Img fixed={images[0].node.childImageSharp.fixed} objectFit="cover" />
       </ImageWrapper>
     </Content>
-    <Content>
-      <ImageWrapper>
-        <Img fixed={images[1].node.childImageSharp.fixed} objectFit="cover" />
-      </ImageWrapper>
+    <Content reverse>
       <Body>
         <Tertiary>Education</Tertiary>
         <Details>
@@ -94,6 +95,9 @@ const Resume = ({ images }) => (
           viverra aliquet eget sit.
         </Details>
       </Body>
+      <ImageWrapper>
+        <Img fixed={images[1].node.childImageSharp.fixed} objectFit="cover" />
+      </ImageWrapper>
     </Content>
     <Content>
       <Body>

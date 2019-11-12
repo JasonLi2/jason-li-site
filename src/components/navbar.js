@@ -38,20 +38,6 @@ const NavItem = styled.li`
 `;
 
 const Navbar = () => {
-  const [background, setBackground] = useState("transparent");
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll);
-
-    return () => document.removeEventListener("scroll", handleScroll);
-  });
-
-  function handleScroll() {
-    if (window.pageYOffset <= window.innerHeight) {
-      setBackground("transparent");
-    } else {
-      setBackground("#202020");
-    }
-  }
   return (
     <Container background={background}>
       <Link to="/">
@@ -59,13 +45,13 @@ const Navbar = () => {
       </Link>
       <NavList>
         <NavItem>
-          <a href="#about">About</a>
+          <Link href="/#about">About</Link>
         </NavItem>
         <NavItem>
-          <Link to="#blog">Blog</Link>
+          <Link to="/#blog">Blog</Link>
         </NavItem>
         <NavItem>
-          <Link to="#contact">Contact</Link>
+          <Link to="/#contact">Contact</Link>
         </NavItem>
       </NavList>
     </Container>

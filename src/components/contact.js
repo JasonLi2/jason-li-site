@@ -29,6 +29,11 @@ const FormWrapper = styled.div`
   border-radius: 5px;
   width: 45rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  @media only screen and (max-width: 39em) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 6rem);
+  }
 `;
 
 const Contact = () => {
