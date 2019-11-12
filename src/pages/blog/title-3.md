@@ -1,6 +1,7 @@
 ---
 title: Title Three
-image: /static/images/IMG_0513.jpg
+image: /static/images/IMG_0512.jpg
+date: 2019-11-10T14:04:00.000Z
 ---
 
 # This is a Title

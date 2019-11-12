@@ -8,7 +8,7 @@ import Img from "gatsby-image";
 const Container = styled.section`
   padding: 5rem 3rem;
   max-width: 100rem;
-  margin: 5rem auto;
+  margin: 0 auto;
 `;
 
 const Primary = styled.h1`
@@ -16,6 +16,13 @@ const Primary = styled.h1`
   font-size: 5rem;
   font-weight: 700;
   padding: 3rem 0 0;
+  line-height: 1;
+`;
+
+const Date = styled.span`
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
 `;
 
 const Content = styled.div`
@@ -68,7 +75,7 @@ const BlogPost = ({
   data: {
     markdownRemark: {
       html,
-      frontmatter: { title, image }
+      frontmatter: { title, date, image }
     }
   }
 }) => (
@@ -78,6 +85,7 @@ const BlogPost = ({
     </Helmet>
     <Container>
       <Primary>{title}</Primary>
+      <Date>{date}</Date>
       <Img fluid={image.childImageSharp.fluid} objectFit="contain" />
       <Content dangerouslySetInnerHTML={{ __html: html }} />
     </Container>
@@ -92,6 +100,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMM Do, YYYY")
         image {
           childImageSharp {
             fluid {

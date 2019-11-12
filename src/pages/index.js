@@ -6,11 +6,13 @@ import Landing from "../components/landing";
 import About from "../components/about";
 import Resume from "../components/resume";
 import Contact from "../components/contact";
+import BlogList from "../components/blogList";
 
 const Index = ({
   data: {
     hero,
-    allFile: { resumeImages }
+    allFile: { resumeImages },
+    allMarkdownRemark: { edges }
   }
 }) => (
   <Layout>
@@ -21,6 +23,7 @@ const Index = ({
     <About name="about" />
     <Resume images={resumeImages} />
     <Contact name="contact" />
+    <BlogList data={edges} />
   </Layout>
 );
 
@@ -41,6 +44,26 @@ export const pageQuery = graphql`
           childImageSharp {
             fixed(width: 300, height: 400) {
               ...GatsbyImageSharpFixed_noBase64
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "MMM Do, YYYY")
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
             }
           }
         }

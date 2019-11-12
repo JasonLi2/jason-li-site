@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
@@ -11,6 +11,8 @@ const Container = styled.nav`
   left: 0;
   align-items: center;
   padding: 0.5rem 0;
+  background: ${props => props.background};
+  transition: all 0.3s;
 `;
 
 const Name = styled.h4`
@@ -35,27 +37,39 @@ const NavItem = styled.li`
   }
 `;
 
-class Navbar extends Component {
-  render() {
-    return (
-      <Container>
-        <Link to="/">
-          <Name>Jason Li</Name>
-        </Link>
-        <NavList>
-          <NavItem>
-            <a href="#about">About</a>
-          </NavItem>
-          <NavItem>
-            <Link to="/blog">Blog</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/contact">Contact</Link>
-          </NavItem>
-        </NavList>
-      </Container>
-    );
+const Navbar = () => {
+  const [background, setBackground] = useState("transparent");
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+
+    return () => document.removeEventListener("scroll", handleScroll);
+  });
+
+  function handleScroll() {
+    if (window.pageYOffset <= window.innerHeight) {
+      setBackground("transparent");
+    } else {
+      setBackground("#202020");
+    }
   }
-}
+  return (
+    <Container background={background}>
+      <Link to="/">
+        <Name>Jason Li</Name>
+      </Link>
+      <NavList>
+        <NavItem>
+          <a href="#about">About</a>
+        </NavItem>
+        <NavItem>
+          <Link to="/blog">Blog</Link>
+        </NavItem>
+        <NavItem>
+          <Link to="/contact">Contact</Link>
+        </NavItem>
+      </NavList>
+    </Container>
+  );
+};
 
 export default Navbar;

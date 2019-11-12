@@ -1,6 +1,7 @@
 ---
 title: Title One
 image: /static/images/IMG_0510.jpg
+date: 2019-11-05T14:04:00.000Z
 ---
 
 # This is a Title
