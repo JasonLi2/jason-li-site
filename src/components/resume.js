@@ -1,18 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import Img from "gatsby-image";
 
 const Container = styled.section`
-background: #303030;
+  background: #303030;
   padding: 5rem 0;
-`
+`;
 
 const Content = styled.div`
-padding: 3rem;
-max-width: 100rem;
-margin: 0 auto;
-display: flex;
-align-items: center;
-`
+  padding: 3rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+`;
 
 const Secondary = styled.h3`
   color: #fff;
@@ -21,64 +22,105 @@ const Secondary = styled.h3`
   font-weight: 300;
   max-width: 100rem;
   margin: 0 auto;
-`
+`;
 
 const Tertiary = styled.h4`
-color: #afafaf;
-font-weight: 300;
-font-size: 2.5rem;
-padding-top: 1.5rem;
-`
-
+  color: #afafaf;
+  font-weight: 300;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+`;
 
 const Details = styled.p`
-    margin: 0 auto;
-    text-align: justify;
-`
+  margin: 0 auto;
+  text-align: justify;
+`;
 
-const Body = styled.span`
+const Body = styled.span``;
 
-`
+const ImageWrapper = styled.div`
+  padding: 3rem;
+`;
 
-const Image = styled.img`
-  width: 40rem;
-  height: 40rem;
-  object-fit: cover;
-  padding: 0 3rem;
-`
-
-const Resume = () => (
-    <Container>
+const Resume = ({ images }) => (
+  <Container>
     <Secondary>My experience</Secondary>
     <Content>
       <Body>
         <Tertiary>Projects</Tertiary>
         <Details>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet. Vel pretium lectus quam id leo in vitae. Curabitur gravida arcu ac tortor. Quam elementum pulvinar etiam non quam lacus suspendisse. Ac auctor augue mauris augue neque gravida in fermentum. Elementum tempus egestas sed sed risus pretium. Magna fringilla urna porttitor rhoncus dolor purus non enim. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Scelerisque eleifend donec pretium vulputate sapien. Et molestie ac feugiat sed lectus. Urna molestie at elementum eu facilisis sed. At ultrices mi tempus imperdiet. Dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed. Neque convallis a cras semper. Mauris a diam maecenas sed enim ut sem viverra aliquet. Dictum at tempor commodo ullamcorper. Sodales ut etiam sit amet. Maecenas sed enim ut sem viverra aliquet eget sit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu
+          volutpat odio facilisis mauris sit amet. Vel pretium lectus quam id
+          leo in vitae. Curabitur gravida arcu ac tortor. Quam elementum
+          pulvinar etiam non quam lacus suspendisse. Ac auctor augue mauris
+          augue neque gravida in fermentum. Elementum tempus egestas sed sed
+          risus pretium. Magna fringilla urna porttitor rhoncus dolor purus non
+          enim. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus.
+          Scelerisque eleifend donec pretium vulputate sapien. Et molestie ac
+          feugiat sed lectus. Urna molestie at elementum eu facilisis sed. At
+          ultrices mi tempus imperdiet. Dignissim diam quis enim lobortis. Cras
+          pulvinar mattis nunc sed. Neque convallis a cras semper. Mauris a diam
+          maecenas sed enim ut sem viverra aliquet. Dictum at tempor commodo
+          ullamcorper. Sodales ut etiam sit amet. Maecenas sed enim ut sem
+          viverra aliquet eget sit.
         </Details>
       </Body>
-      <Image src='https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'/>
+      <ImageWrapper>
+        <Img fixed={images[0].node.childImageSharp.fixed} objectFit="cover" />
+      </ImageWrapper>
     </Content>
     <Content>
-        <Image src='https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'/>
-        <Body>
+      <ImageWrapper>
+        <Img fixed={images[1].node.childImageSharp.fixed} objectFit="cover" />
+      </ImageWrapper>
+      <Body>
         <Tertiary>Education</Tertiary>
         <Details>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet. Vel pretium lectus quam id leo in vitae. Curabitur gravida arcu ac tortor. Quam elementum pulvinar etiam non quam lacus suspendisse. Ac auctor augue mauris augue neque gravida in fermentum. Elementum tempus egestas sed sed risus pretium. Magna fringilla urna porttitor rhoncus dolor purus non enim. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Scelerisque eleifend donec pretium vulputate sapien. Et molestie ac feugiat sed lectus. Urna molestie at elementum eu facilisis sed. At ultrices mi tempus imperdiet. Dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed. Neque convallis a cras semper. Mauris a diam maecenas sed enim ut sem viverra aliquet. Dictum at tempor commodo ullamcorper. Sodales ut etiam sit amet. Maecenas sed enim ut sem viverra aliquet eget sit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu
+          volutpat odio facilisis mauris sit amet. Vel pretium lectus quam id
+          leo in vitae. Curabitur gravida arcu ac tortor. Quam elementum
+          pulvinar etiam non quam lacus suspendisse. Ac auctor augue mauris
+          augue neque gravida in fermentum. Elementum tempus egestas sed sed
+          risus pretium. Magna fringilla urna porttitor rhoncus dolor purus non
+          enim. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus.
+          Scelerisque eleifend donec pretium vulputate sapien. Et molestie ac
+          feugiat sed lectus. Urna molestie at elementum eu facilisis sed. At
+          ultrices mi tempus imperdiet. Dignissim diam quis enim lobortis. Cras
+          pulvinar mattis nunc sed. Neque convallis a cras semper. Mauris a diam
+          maecenas sed enim ut sem viverra aliquet. Dictum at tempor commodo
+          ullamcorper. Sodales ut etiam sit amet. Maecenas sed enim ut sem
+          viverra aliquet eget sit.
         </Details>
-        </Body>
+      </Body>
     </Content>
     <Content>
       <Body>
         <Tertiary>Work</Tertiary>
         <Details>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet. Vel pretium lectus quam id leo in vitae. Curabitur gravida arcu ac tortor. Quam elementum pulvinar etiam non quam lacus suspendisse. Ac auctor augue mauris augue neque gravida in fermentum. Elementum tempus egestas sed sed risus pretium. Magna fringilla urna porttitor rhoncus dolor purus non enim. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Scelerisque eleifend donec pretium vulputate sapien. Et molestie ac feugiat sed lectus. Urna molestie at elementum eu facilisis sed. At ultrices mi tempus imperdiet. Dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed. Neque convallis a cras semper. Mauris a diam maecenas sed enim ut sem viverra aliquet. Dictum at tempor commodo ullamcorper. Sodales ut etiam sit amet. Maecenas sed enim ut sem viverra aliquet eget sit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu
+          volutpat odio facilisis mauris sit amet. Vel pretium lectus quam id
+          leo in vitae. Curabitur gravida arcu ac tortor. Quam elementum
+          pulvinar etiam non quam lacus suspendisse. Ac auctor augue mauris
+          augue neque gravida in fermentum. Elementum tempus egestas sed sed
+          risus pretium. Magna fringilla urna porttitor rhoncus dolor purus non
+          enim. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus.
+          Scelerisque eleifend donec pretium vulputate sapien. Et molestie ac
+          feugiat sed lectus. Urna molestie at elementum eu facilisis sed. At
+          ultrices mi tempus imperdiet. Dignissim diam quis enim lobortis. Cras
+          pulvinar mattis nunc sed. Neque convallis a cras semper. Mauris a diam
+          maecenas sed enim ut sem viverra aliquet. Dictum at tempor commodo
+          ullamcorper. Sodales ut etiam sit amet. Maecenas sed enim ut sem
+          viverra aliquet eget sit.
         </Details>
-            </Body>
-            <Image src='https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'/>
-      </Content>
+      </Body>
+      <ImageWrapper>
+        <Img fixed={images[2].node.childImageSharp.fixed} objectFit="cover" />
+      </ImageWrapper>
+    </Content>
+  </Container>
+);
 
-    </Container>
-)
-
-export default Resume
+export default Resume;
