@@ -1,5 +1,5 @@
 ---
-title: Quick Midoriya Sketches
+title: Midoriya Sketches
 image: /static/images/IMG_0511.jpg
 date: 2019-11-09T14:04:00.000Z
 ---
