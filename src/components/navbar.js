@@ -62,10 +62,10 @@ const Navbar = () => {
           <a href="#about">About</a>
         </NavItem>
         <NavItem>
-          <Link to="/blog">Blog</Link>
+          <Link to="#blog">Blog</Link>
         </NavItem>
         <NavItem>
-          <Link to="/contact">Contact</Link>
+          <Link to="#contact">Contact</Link>
         </NavItem>
       </NavList>
     </Container>

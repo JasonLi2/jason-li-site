@@ -50,7 +50,7 @@ const Image = styled(Img)`
 `;
 
 const BlogList = ({ data }) => (
-  <Container>
+  <Container id="blog">
     <Secondary>Blog Posts</Secondary>
     <Content>
       {data.map(
