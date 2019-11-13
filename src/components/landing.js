@@ -40,7 +40,7 @@ const Landing = ({ hero }) => (
     <Content>
       <Primary>Jason Li</Primary>
       <Secondary>
-        Programmer, avid gamer, anime fan, and an amateur artist and musician.
+        Developer, gamer, anime fan, and amateur artist and musician.
       </Secondary>
     </Content>
   </Container>
