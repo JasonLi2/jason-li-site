@@ -12,7 +12,7 @@ const Container = styled(BackgroundImage)`
 
 const Content = styled.div`
   position: absolute;
-  top: 40%;
+  top: 43%;
   left: 48%;
   transform: translate(-50%, -50%);
   width: 75%;
