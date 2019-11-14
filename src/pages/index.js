@@ -22,8 +22,8 @@ const Index = ({
     <Landing hero={hero} />
     <About name="about" />
     <Resume images={resumeImages} />
-    <Contact name="contact" />
     <BlogList data={edges} />
+    <Contact name="contact" />
   </Layout>
 );
 
