@@ -7,7 +7,7 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
-  background: url("https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
+  background: url("https://images.unsplash.com/photo-1494515426402-f1980ace7a9c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
     center center/cover;
   height: 65rem;
   position: relative;
@@ -23,7 +23,7 @@ const Secondary = styled.h3`
 const FormWrapper = styled.div`
   position: absolute;
   top: 50%;
-  left: 65%;
+  left: 25%;
   transform: translateY(-50%);
   background-color: #404040;
   border-radius: 5px;
