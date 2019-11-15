@@ -20,8 +20,8 @@ const Index = ({
       <title>Jason Li - Welcome</title>
     </Helmet>
     <Landing hero={hero} />
-    <BlogList data={edges} />
     <About name="about" />
+    <BlogList data={edges} />
     <Resume images={resumeImages} />
     <Contact name="contact" />
   </Layout>
