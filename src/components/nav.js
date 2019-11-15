@@ -150,10 +150,10 @@ const Nav = () => {
           <NavLink to="/#about">About</NavLink>
         </LinkContainer>
         <LinkContainer>
-          <NavLink to="/#contact">Contact</NavLink>
+          <NavLink to="/#blog">Blog</NavLink>
         </LinkContainer>
         <LinkContainer>
-          <NavLink to="/#blog">Blog</NavLink>
+          <NavLink to="/#contact">Contact</NavLink>
         </LinkContainer>
       </Links>
     </Container>
