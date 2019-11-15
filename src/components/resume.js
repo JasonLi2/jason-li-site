@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 
 const Container = styled.section`
-  background: #303030;
+  background: #202020;
   padding: 5rem 0;
 `;
 
