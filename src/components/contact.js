@@ -7,7 +7,7 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
-  background: url("https://images.unsplash.com/photo-1490100667990-4fced8021649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80")
+  background: url("https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
     center center/cover;
   height: 65rem;
   position: relative;
