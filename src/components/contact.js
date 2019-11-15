@@ -23,7 +23,7 @@ const Secondary = styled.h3`
 const FormWrapper = styled.div`
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 75%;
   transform: translateY(-50%);
   background-color: #404040;
   border-radius: 5px;
